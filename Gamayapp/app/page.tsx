@@ -249,12 +249,12 @@ export default async function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                name: 'Miss Sarah',
-                text: "I'm so happy to have bought a property from Elevation Point. They took care of me during the inspection and gave me my allocation in less than one month! I wasn't expecting so much, but they proved to be in for serious business. I recommend them to anyone who is starting their investment Journey.",
+                name: 'Mrs. Joy',
+                text: "I'm really happy I chose to buy a property from Gamay Properties. They guided me throughout the inspection process and even gave me my allocation in less than a month. I honestly didn't expect things to go this smoothly, but they showed they're truly serious about what they do. I would definitely recommend them to anyone just starting their investment journey.",
               },
               {
                 name: 'Mr. David',
-                text: "I got to know EPIS through a friend who bought from them. To be honest, at first, I was sceptical about the investment but I just took the risk, I went for the inspection and they treated me well. I eventually paid for the land after all my questions were answered and I have been allocated.",
+                text: "I first heard about Gamay Properties through a friend who had already invested with them. To be honest, I was a bit sceptical at the beginning, but I decided to give it a try. After attending the inspection and having all my questions answered patiently, I felt more confident. I went ahead with the purchase, and I've since received my allocation. It's been a good experience overall.",
               },
             ].map((testimonial) => (
               <div
