@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Sans, Poppins } from 'next/font/google'
 import './globals.css'
 import { ToastContainer } from '@/components/ui/Toast'
@@ -16,14 +16,23 @@ const poppins = Poppins({
   display: 'swap',
 })
 
+export function generateViewport(): Viewport {
+  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || '#059669'
+  return {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor,
+  }
+}
+
 export function generateMetadata(): Metadata {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || 'PlotManager'
-  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || '#059669'
   return {
     title: `${appName} - Land Buyers Management`,
     description: 'Manage land buyers, track payments, and send reminders',
     manifest: '/manifest.json',
-    themeColor,
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
@@ -31,12 +40,6 @@ export function generateMetadata(): Metadata {
     },
     formatDetection: {
       telephone: false,
-    },
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 1,
-      userScalable: false,
     },
   }
 }
