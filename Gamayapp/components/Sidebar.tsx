@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Users, UserCog, LogOut, Menu, X, MapPin, MessageCircle, Building, Bell, Settings, UserCheck, BarChart3, ScrollText } from 'lucide-react'
+import { Home, Users, UserCog, LogOut, Menu, X, MessageCircle, Building, Bell, Settings, UserCheck, BarChart3, ScrollText } from 'lucide-react'
+import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
@@ -45,9 +46,7 @@ export function Sidebar({ userRole, userName }: SidebarProps) {
     <>
       <div className="p-6 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center">
-            <MapPin className="w-6 h-6 text-white" />
-          </div>
+          <Image src="/icons/icon-192x192.png" alt={appName} width={48} height={48} className="rounded-2xl" />
           <div className="flex-1">
             <h2 className="font-display font-bold text-lg text-gray-900">{appName}</h2>
             <p className="text-xs text-gray-500 capitalize">{userRole.replace('_', ' ')}</p>

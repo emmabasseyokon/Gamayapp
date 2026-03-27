@@ -285,9 +285,7 @@ export default async function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-white" />
-                </div>
+                <Image src="/icons/icon-192x192.png" alt={companyName} width={40} height={40} className="rounded-xl" />
                 <span className="font-display text-xl font-bold">{companyName}</span>
               </div>
               <p className="text-gray-400 text-sm max-w-md">

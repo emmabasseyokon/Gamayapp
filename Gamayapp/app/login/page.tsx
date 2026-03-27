@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { LogIn, MapPin, Eye, EyeOff } from 'lucide-react'
+import { LogIn, Eye, EyeOff } from 'lucide-react'
+import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
 import { loginSchema, type LoginFormData } from '@/lib/validations'
 import { Button } from '@/components/ui/Button'
@@ -74,9 +75,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md space-y-8 animate-slide-up">
         <div className="text-center space-y-4">
           <Link href="/" className="inline-block">
-            <div className="mx-auto w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center shadow-lg shadow-primary-500/30">
-              <MapPin className="w-10 h-10 text-white" />
-            </div>
+            <Image src="/icons/icon-192x192.png" alt={process.env.NEXT_PUBLIC_APP_NAME || 'PlotManager'} width={80} height={80} className="mx-auto rounded-3xl shadow-lg shadow-primary-500/30" />
           </Link>
           <div>
             <h1 className="font-display text-4xl font-bold text-gray-900 tracking-tight">
