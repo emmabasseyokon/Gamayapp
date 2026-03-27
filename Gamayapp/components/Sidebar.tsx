@@ -48,7 +48,7 @@ export function Sidebar({ userRole, userName }: SidebarProps) {
         <div className="flex items-center gap-3">
           <Image src="/icons/icon-192x192.png" alt={appName} width={48} height={48} className="rounded-2xl" />
           <div className="flex-1">
-            <h2 className="font-display font-bold text-lg text-gray-900">{appName}</h2>
+            <h2 className="font-display font-bold text-lg text-primary-600">{appName}</h2>
             <p className="text-xs text-gray-500 capitalize">{userRole.replace('_', ' ')}</p>
           </div>
         </div>

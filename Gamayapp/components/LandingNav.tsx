@@ -14,7 +14,7 @@ export function LandingNav({ companyName }: { companyName: string }) {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/icons/icon-192x192.png" alt={companyName} width={40} height={40} className="rounded-xl" />
-            <span className="font-display text-xl font-bold text-gray-900">{companyName}</span>
+            <span className="font-display text-xl font-bold text-primary-600">{companyName}</span>
           </Link>
 
           {/* Desktop links */}
